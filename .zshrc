@@ -576,7 +576,7 @@ alias starwarz="telnet towel.blinkenlights.nl"
 # 
 # Functions
 function mkt(){
-	mkdir {bin,reversing,web,crypto,misc}
+	mkdir {bin,reversing,stego,web,crypto,misc}
 }
 
 # fzf improvement
