@@ -372,7 +372,7 @@ awful.keyboard.append_global_keybindings({
 	end, { description = "decrease the number of columns", group = "layout" }),
 
 	--- On the fly padding change
-	awful.key({ mod, shift }, "=", function()
+	awful.key({ mod, shift }, "+", function()
 		helpers.client.resize_padding(5)
 	end, { description = "add padding", group = "layout" }),
 	awful.key({ mod, shift }, "-", function()
@@ -380,7 +380,7 @@ awful.keyboard.append_global_keybindings({
 	end, { description = "subtract padding", group = "layout" }),
 
 	--- On the fly useless gaps change
-	awful.key({ mod }, "=", function()
+	awful.key({ mod }, "+", function()
 		helpers.client.resize_gaps(5)
 	end, { description = "add gaps", group = "layout" }),
 
