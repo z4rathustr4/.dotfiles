@@ -1,0 +1,26 @@
+font:
+  normal:
+    family: Hack NF FC Ligatured
+    style: Regular
+
+  bold:
+    family: Hack NF FC Ligatured
+    style: Bold
+
+  italic:
+    family: Hack NF FC Ligatured
+    style: Italic
+
+  bold_italic:
+    family: Hack NF FC Ligatured
+    style: Bold Italic
+
+  size: 9 
+
+key_bindings:
+  - {key: PageUp, chars: "\x1bOH"} # Home
+  - {key: PageDown, chars: "\x1bOF"} # End 
+  - {key: Left, mods: Alt, chars: "\eb"}
+  - {key: Right, mods: Alt, chars: "\ef"}
+  - {key: Left, mods: Control, chars: "\eb"}
+  - {key: Right, mods: Control, chars: "\ef"}
