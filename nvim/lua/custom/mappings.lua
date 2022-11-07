@@ -1,6 +1,12 @@
 local M = {}
 
 M.general = {
+  v = {
+
+    ["<A-j>"] = {":m '>+1<CR>gv=gv", "move block of code down one line (normal mode)"},
+    ["<A-k>"] = {":m '<-2<CR>gv=gv", "move block of code up one line (normal mode)"},
+
+    },
   i = {
     -- navigate within insert mode
     ["<C-l>"] = { "<Left>", "move left" },
@@ -11,6 +17,13 @@ M.general = {
     ["jk"] = { "<ESC>", "escape insert mode" , opts = { nowait = true }},
     ["kk"] = {"<ESC>", "exit insert mode", opts = { nowait = true }},
   },
+  n = {
+
+    ["<leader>s"] = { ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", "global substitution of a pattern" },
+    ["<A-j>"] = {":m '.+1<CR>gv=gv", "move block of code down one line (normal mode)"},
+    ["<A-k>"] = {":m '.-2<CR>gv=gv", "move block of code up one line (normal mode)"},
+
+    },
 }
 
 M.packer = {
