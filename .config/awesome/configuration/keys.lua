@@ -192,7 +192,7 @@ awful.keyboard.append_global_keybindings({
 
 	--- Screenshots
 	awful.key({}, "Print", function()
-      awful.spawn("flatpak run org.flameshot.Flameshot gui")
+      awful.spawn("flameshot gui")
 --		awful.spawn.easy_async_with_shell(apps.utils.full_screenshot, function() end)
 	end, { description = "take a full screenshot", group = "hotkeys" }),
 

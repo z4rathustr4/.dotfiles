@@ -153,9 +153,9 @@ return {
 	bold_brightens_ansi_colors = true,
 	colors = {
 		foreground = "#edeff0",
-		background = "#0c0e0f",
-		cursor_bg = "#edeff0",
-		cursor_fg = "#edeff0",
+		background = "#0f0e0f",
+		cursor_bg = "#df5b61",
+		cursor_fg = "#df5b61",
 		cursor_border = "#232526",
 		selection_fg = "#0c0e0f",
 		selection_bg = "#edeff0",
