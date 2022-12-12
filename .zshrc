@@ -48,7 +48,7 @@ bindkey '^[[F' end-of-line                        # end
 bindkey '^[[Z' undo                               # shift + tab undo last action
 
 # enable completion features
-autoload -uz compinit
+autoload -Uz compinit
 compinit -d ~/.cache/zcompdump
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' auto-description 'specify: %d'
@@ -76,36 +76,6 @@ setopt hist_verify            # show command with history expansion to user befo
 
 # force zsh to show the complete history
 alias history="history 0"
-
-###########################################################
-# ======================================================= #
-#                  antigen plugin manager                 #
-# ======================================================= #
-###########################################################
-
-source $home/antigen.zsh
-
-
-# load the oh-my-zsh's library.
-antigen use oh-my-zsh
-
-# bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle heroku
-antigen bundle pip
-antigen bundle lein
-antigen bundle command-not-found
-
-# syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-
-antigen bundle joshskidmore/zsh-fzf-history-search
-# load the theme (no theme)
-antigen theme kennethreitz
-# tell antigen that you're done.
-antigen apply
-
 # enable color support of ls, less and man, and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -248,3 +218,33 @@ function redel ()
 {
   sed ':a;N;$!ba;s/\n/ /g' $1
 }
+
+###########################################################
+# ======================================================= #
+#                  antigen plugin manager                 #
+# ======================================================= #
+###########################################################
+
+source $HOME/antigen.zsh
+
+
+# load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+
+# syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+antigen bundle joshskidmore/zsh-fzf-history-search
+# load the theme (no theme)
+antigen theme kennethreitz
+# tell antigen that you're done.
+antigen apply
+
