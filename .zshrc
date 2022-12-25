@@ -199,7 +199,7 @@ alias cat='bat'
 alias crp="rsync -avP "
 alias pacup="sudo pacman -Syu"
 alias pacs="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
-alias pars="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S"
+alias yays="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
 alias starwarz="telnet towel.blinkenlights.nl"
 
 ###########################################################
