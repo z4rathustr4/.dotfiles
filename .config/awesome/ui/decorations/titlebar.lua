@@ -10,7 +10,7 @@ local decorations = require("ui.decorations")
 --- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 --- Disable this if using `picom` to round your corners
---- decorations.enable_rounding()
+decorations.enable_rounding()
 
 --- Tabbed
 local bling = require("modules.bling")
@@ -125,7 +125,7 @@ client.connect_signal("request::titlebars", function(c)
 				},
 			},
 			bg = beautiful.titlebar_bg,
-			shape = helpers.ui.prrect(beautiful.border_radius, true, true, false, false),
+			shape = helpers.ui.rrect(true, true, false, false),
 			widget = wibox.container.background,
 		})
 
@@ -137,7 +137,7 @@ client.connect_signal("request::titlebars", function(c)
 		})
 		:setup({
 			bg = beautiful.titlebar_bg,
-			shape = helpers.ui.prrect(beautiful.border_radius, false, false, true, true),
+			shape = helpers.ui.rrect(false, false, true, true),
 			widget = wibox.container.background,
 		})
 end)
