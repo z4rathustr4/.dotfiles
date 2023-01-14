@@ -47,6 +47,27 @@ return require('packer').startup(function(use)
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
     use('RRethy/nvim-base16')
+    use {
+        "NvChad/nvterm",
+        config = function ()
+            require("nvterm").setup()
+        end,
+    }
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+    use {
+        'saecki/crates.nvim',
+        tag = 'v0.3.0',
+        requires = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            require('crates').setup()
+        end,
+    }
+    use {'simrat39/rust-tools.nvim'}
 end)
 
 

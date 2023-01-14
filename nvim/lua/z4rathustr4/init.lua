@@ -2,7 +2,7 @@ require("z4rathustr4.remap")
 require("z4rathustr4.set")
 
 local augroup = vim.api.nvim_create_augroup
-local z4rathustr4_group = augroup('ThePrimeagen', {})
+local z4rathustr4_group = augroup('z4rathustr4', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
