@@ -1,16 +1,16 @@
-# ▒███████▒▄▄▄      ██▀███  ▄▄▄    ▄▄▄█████▓██░ ██ █    ██  ██████▄▄▄█████▓██▀███  ▄▄▄      
-# ▒ ▒ ▒ ▄▀▒████▄   ▓██ ▒ ██▒████▄  ▓  ██▒ ▓▓██░ ██▒██  ▓██▒██    ▒▓  ██▒ ▓▓██ ▒ ██▒████▄    
-# ░ ▒ ▄▀▒░▒██  ▀█▄ ▓██ ░▄█ ▒██  ▀█▄▒ ▓██░ ▒▒██▀▀██▓██  ▒██░ ▓██▄  ▒ ▓██░ ▒▓██ ░▄█ ▒██  ▀█▄  
-#   ▄▀▒   ░██▄▄▄▄██▒██▀▀█▄ ░██▄▄▄▄█░ ▓██▓ ░░▓█ ░██▓▓█  ░██░ ▒   ██░ ▓██▓ ░▒██▀▀█▄ ░██▄▄▄▄██ 
+# ▒███████▒▄▄▄      ██▀███  ▄▄▄    ▄▄▄█████▓██░ ██ █    ██  ██████▄▄▄█████▓██▀███  ▄▄▄
+# ▒ ▒ ▒ ▄▀▒████▄   ▓██ ▒ ██▒████▄  ▓  ██▒ ▓▓██░ ██▒██  ▓██▒██    ▒▓  ██▒ ▓▓██ ▒ ██▒████▄
+# ░ ▒ ▄▀▒░▒██  ▀█▄ ▓██ ░▄█ ▒██  ▀█▄▒ ▓██░ ▒▒██▀▀██▓██  ▒██░ ▓██▄  ▒ ▓██░ ▒▓██ ░▄█ ▒██  ▀█▄
+#   ▄▀▒   ░██▄▄▄▄██▒██▀▀█▄ ░██▄▄▄▄█░ ▓██▓ ░░▓█ ░██▓▓█  ░██░ ▒   ██░ ▓██▓ ░▒██▀▀█▄ ░██▄▄▄▄██
 # ▒███████▒▓█   ▓██░██▓ ▒██▒▓█   ▓██▒▒██▒ ░░▓█▒░██▒▒█████▓▒██████▒▒ ▒██▒ ░░██▓ ▒██▒▓█   ▓██▒
 # ░▒▒ ▓░▒░▒▒▒   ▓▒█░ ▒▓ ░▒▓░▒▒   ▓▒█░▒ ░░   ▒ ░░▒░░▒▓▒ ▒ ▒▒ ▒▓▒ ▒ ░ ▒ ░░  ░ ▒▓ ░▒▓░▒▒   ▓▒█░
 # ░░▒ ▒ ░ ▒ ▒   ▒▒ ░ ░▒ ░ ▒░ ▒   ▒▒ ░  ░    ▒ ░▒░ ░░▒░ ░ ░░ ░▒  ░ ░   ░     ░▒ ░ ▒░ ▒   ▒▒ ░
-# ░ ░ ░ ░ ░ ░   ▒    ░░   ░  ░   ▒   ░      ░  ░░ ░░░░ ░ ░░  ░  ░   ░       ░░   ░  ░   ▒   
+# ░ ░ ░ ░ ░ ░   ▒    ░░   ░  ░   ▒   ░      ░  ░░ ░░░░ ░ ░░  ░  ░   ░       ░░   ░  ░   ▒
 #   ░ ░         ░  ░  ░          ░  ░       ░  ░  ░  ░          ░            ░          ░  ░
-# ░                                                                                         
-# 
+# ░
+#
 # @z4rathustr4 personal zshrc config. Feel free to share, modify, copy and redistribute,
-# as this is a work I enjoy doing, sharing, teaching and learning.  
+# as this is a work I enjoy doing, sharing, teaching and learning.
 #                                   CC BY-NC-SA
 
 # If you come from bash you might have to change your $PATH.
@@ -207,7 +207,7 @@ alias starwarz="telnet towel.blinkenlights.nl"
 #                   USER DEFINED FUNCTIONS                #
 # ======================================================= #
 ###########################################################
-# 
+#
 # Functions
 function mkt(){
 	mkdir {bin,reversing,stego,web,crypto,misc}
@@ -268,8 +268,8 @@ antigen bundle joshskidmore/zsh-fzf-history-search
 # tell antigen that you're done.
 antigen apply
 
-
-
+# Add starship shell. It's written in rust and that is nice.
+eval "$(starship init zsh)"
 
 # -- endCustom --
 
