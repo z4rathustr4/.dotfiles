@@ -67,7 +67,9 @@ return require('packer').startup(function(use)
             require('crates').setup()
         end,
     }
+    use {'nvim-tree/nvim-web-devicons'}
     use {'simrat39/rust-tools.nvim'}
+    use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
 end)
 
 
