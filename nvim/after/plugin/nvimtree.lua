@@ -4,6 +4,7 @@ if not present then
   return
 end
 
+
 local options = {
   filters = {
     dotfiles = false,
@@ -11,8 +12,6 @@ local options = {
   },
   disable_netrw = true,
   hijack_netrw = true,
-  open_on_setup = false,
-  ignore_ft_on_setup = { "alpha" },
   hijack_cursor = true,
   hijack_unnamed_buffer_when_opening = false,
   update_cwd = true,
@@ -22,7 +21,7 @@ local options = {
   },
   view = {
     adaptive_size = true,
-    side = "right",
+    side = "left",
     width = 25,
     hide_root_folder = true,
   },
@@ -81,5 +80,6 @@ local options = {
   },
 }
 
+-- check for any override
+
 vim.keymap.set("n", "<C-n>", vim.cmd.NvimTreeToggle)
-nvimtree.setup(options)

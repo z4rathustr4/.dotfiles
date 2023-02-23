@@ -14,7 +14,6 @@ return require('packer').startup(function(use)
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('savq/melange')
 	use('ThePrimeagen/harpoon')
-	use('nvim-tree/nvim-tree.lua')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
 	use {
@@ -67,9 +66,30 @@ return require('packer').startup(function(use)
             require('crates').setup()
         end,
     }
-    use {'nvim-tree/nvim-web-devicons'}
     use {'simrat39/rust-tools.nvim'}
     use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
+    -- use {'Mofiqul/vscode.nvim'}
+    --
+    -- awesome-vim-colorschemes
+    use {'rafi/awesome-vim-colorschemes'}
+    -- lush.nvim
+    -- use {'rktjmp/lush.nvim'}
+    use {'audibleblink/hackthebox.vim'}
+
+
+    use {'nvim-tree/nvim-web-devicons'}
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+    }
+    -- markdown-preview.nvim
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
 end)
 
 

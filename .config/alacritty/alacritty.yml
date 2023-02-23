@@ -12,7 +12,7 @@ font:
     family: Hack NF FC Ligatured
     style: Bold Italic
 
-  size: 9
+  size: 12
 
 key_bindings:
   - {key: PageUp, chars: "\x1bOH"} # Home
@@ -21,3 +21,5 @@ key_bindings:
   - {key: Right, mods: Alt, chars: "\ef"}
   - {key: Left, mods: Control, chars: "\eb"}
   - {key: Right, mods: Control, chars: "\ef"}
+import:
+  - /home/operat0r/.dotfiles/.config/alacritty/rose-pine-alacritty/dist/rose-pine.yml

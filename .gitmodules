@@ -1,0 +1,6 @@
+[submodule "alacritty"]
+	path = alacritty
+	url = https://github.com/rose-pine/alacritty
+[submodule ".config/alacritty/rose-pine-alacritty"]
+	path = .config/alacritty/rose-pine-alacritty
+	url = https://github.com/rose-pine/alacritty

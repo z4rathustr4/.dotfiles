@@ -196,7 +196,7 @@ alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
-alias crp="rsync -avP "
+alias crp="rsync -HAXhaxvPS --numeric-ids --stats "
 alias pacup="sudo pacman -Syu"
 alias pacs="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias yays="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"

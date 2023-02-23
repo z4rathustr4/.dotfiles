@@ -85,6 +85,11 @@ _G.packer_plugins = {
     path = "/home/operat0r/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["awesome-vim-colorschemes"] = {
+    loaded = true,
+    path = "/home/operat0r/.local/share/nvim/site/pack/packer/start/awesome-vim-colorschemes",
+    url = "https://github.com/rafi/awesome-vim-colorschemes"
+  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/home/operat0r/.local/share/nvim/site/pack/packer/start/barbar.nvim",
@@ -127,6 +132,11 @@ _G.packer_plugins = {
     path = "/home/operat0r/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["hackthebox.vim"] = {
+    loaded = true,
+    path = "/home/operat0r/.local/share/nvim/site/pack/packer/start/hackthebox.vim",
+    url = "https://github.com/audibleblink/hackthebox.vim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/operat0r/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -141,6 +151,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/operat0r/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/operat0r/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -236,14 +251,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
 -- Config for: nvterm
 time([[Config for nvterm]], true)
 try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vnvterm\frequire\0", "config", "nvterm")
 time([[Config for nvterm]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
 -- Config for: crates.nvim
 time([[Config for crates.nvim]], true)
 try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vcrates\frequire\0", "config", "crates.nvim")
