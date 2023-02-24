@@ -22,4 +22,4 @@ key_bindings:
   - {key: Left, mods: Control, chars: "\eb"}
   - {key: Right, mods: Control, chars: "\ef"}
 import:
-  - /home/operat0r/.dotfiles/.config/alacritty/rose-pine-alacritty/dist/rose-pine.yml
+  - ~/.alacritty-colorscheme/themes/moonlight_ii_vscode.yaml
