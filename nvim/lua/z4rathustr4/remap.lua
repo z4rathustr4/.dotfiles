@@ -53,4 +53,4 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 
 
-vim.keymap.set("n", "<A-h>", function() require("nvterm.terminal").toggle "horizontal" end)
+vim.keymap.set("n", "<A-h>", "<cmd>ToggleTerm size=15 direction=horizontal<CR>")
