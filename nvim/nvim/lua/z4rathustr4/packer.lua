@@ -46,12 +46,16 @@ return require('packer').startup(function(use)
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
     use('RRethy/nvim-base16')
-    use {
-        "NvChad/nvterm",
-        config = function ()
-            require("nvterm").setup()
-        end,
-    }
+    -- nvterm -> useless outside of NvChad distribution
+    -- use {
+    --     "NvChad/nvterm",
+    --     config = function ()
+    --         require("nvterm").setup()
+    --     end,
+    -- }
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end}
     use {
         'numToStr/Comment.nvim',
         config = function()
@@ -92,6 +96,7 @@ return require('packer').startup(function(use)
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
+    use {"zah/nim.vim"}
 
 end)
 
