@@ -29,7 +29,10 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
+vim.diagnostic.config({
+  virtual_text = false,
+})
 
+vim.g.python_host_prog = "/usr/bin/python"
 
-
-
+vim.g.OmniSharp_server_stdio = 1

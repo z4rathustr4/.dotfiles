@@ -16,6 +16,13 @@ return require('packer').startup(function(use)
 	use('ThePrimeagen/harpoon')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
+    use({
+        "jose-elias-alvarez/null-ls.nvim",
+        config = function()
+            require("null-ls").setup()
+        end,
+        requires = { "nvim-lua/plenary.nvim" },
+    })
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		requires = {
@@ -72,7 +79,7 @@ return require('packer').startup(function(use)
     }
     use {'simrat39/rust-tools.nvim'}
     use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
-    -- use {'Mofiqul/vscode.nvim'}
+    use {'Mofiqul/vscode.nvim'}
     --
     -- awesome-vim-colorschemes
     use {'rafi/awesome-vim-colorschemes'}
@@ -96,7 +103,7 @@ return require('packer').startup(function(use)
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
-
+    use {'OmniSharp/omnisharp-vim'}
 end)
 
 

@@ -197,11 +197,12 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
 alias crp="rsync -HAXhaxvPS --numeric-ids --stats "
-alias vim="nvim "
-alias pacup="sudo pacman -Syu"
+alias vim="nvim " # I GIVE UP ON MAKING MY OWN NEOVIM CONFIG. FUCK Y'ALL STINKY BOOMERS
+alias pacup="sudo pacman -Syu --noconfirm"
 alias pacs="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias yays="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
 alias starwarz="telnet towel.blinkenlights.nl"
+alias pacdesc="pacman -Ss | paste -d '' - - | fzf --multi --preview 'pacman -Si {1}' | cut -d ' ' -f 1 | xargs -ro pacman -Si"
 
 ###########################################################
 # ======================================================= #
@@ -213,6 +214,11 @@ alias starwarz="telnet towel.blinkenlights.nl"
 function mkt(){
 	mkdir {bin,reversing,stego,web,crypto,misc}
 }
+
+function mkcpp(){
+	mkdir {src,lib,include,tests,doc}
+}
+
 
 # fzf improvement
 function fzf-lovely(){
@@ -251,6 +257,12 @@ function redel ()
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=/home/operat0r/.nimble/bin:$PATH
+# pyenv stuff
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PYENV_ROOT/shims:${PATH}"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 ###########################################################
 # ======================================================= #
