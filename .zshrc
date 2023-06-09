@@ -203,6 +203,9 @@ alias pacs="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sud
 alias yays="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
 alias starwarz="telnet towel.blinkenlights.nl"
 alias pacdesc="pacman -Ss | paste -d '' - - | fzf --multi --preview 'pacman -Si {1}' | cut -d ' ' -f 1 | xargs -ro pacman -Si"
+alias wanip="dig @resolver4.opendns.com myip.opendns.com +short"
+alias cp="/usr/bin/advcp -g "
+alias mv="/usr/bin/advmv -g "
 
 ###########################################################
 # ======================================================= #
@@ -241,6 +244,16 @@ function fzf-lovely(){
 	                          rougify {} ||
 	                          cat {}) 2> /dev/null | head -500'
 	fi
+}
+
+function sw-vpn() {
+    if ["$1" = "up"]; then
+        nmcli c up sw_tun0
+    elif ["$1" = "down"]; then
+        nmcli c down sw_tun0
+    else
+        echo -n "Usage: sw-vpn [up|down]"
+    fi
 }
 
 function redel ()
