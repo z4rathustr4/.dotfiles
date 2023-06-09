@@ -32,7 +32,6 @@ vim.g.mapleader = " "
 vim.diagnostic.config({
   virtual_text = false,
 })
-
+vim.o.guicursor = "n-v-c-sm-i-ci-ve:block,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor"
 vim.g.python_host_prog = "/usr/bin/python"
 
-vim.g.OmniSharp_server_stdio = 1

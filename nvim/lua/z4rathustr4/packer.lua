@@ -9,10 +9,10 @@ return require('packer').startup(function(use)
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		-- or                            , branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
+		requires = {'nvim-lua/plenary.nvim'}
 	}
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use('savq/melange')
+    -- use('savq/melange')
 	use('ThePrimeagen/harpoon')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
@@ -85,8 +85,13 @@ return require('packer').startup(function(use)
     use {'rafi/awesome-vim-colorschemes'}
     -- lush.nvim
     -- use {'rktjmp/lush.nvim'}
-    use {'audibleblink/hackthebox.vim'}
-
+    -- use {'audibleblink/hackthebox.vim'}
+    use {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    }
 
     use {'nvim-tree/nvim-web-devicons'}
     use {
@@ -95,15 +100,16 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional, for file icons
         },
     }
-    use {'z4rathustr4/gruber-darker-vim'}
+    -- use {'z4rathustr4/gruber-darker-vim'}
     -- vim-coloresque
-    use {'gko/vim-coloresque'}
+    -- use {'gko/vim-coloresque'}
     -- markdown-preview.nvim
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
-    use {'OmniSharp/omnisharp-vim'}
+    -- use {'OmniSharp/omnisharp-vim'}
+    -- use {"Rigellute/shades-of-purple.vim"}
 end)
 
 
