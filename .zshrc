@@ -189,23 +189,27 @@ fi
 # ======================================================= #
 ###########################################################
 
-# Manual aliases
+# z4rathustr4's aliases
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
-alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
 alias crp="rsync -HAXhaxvPS --numeric-ids --stats "
-alias vim="nvim " # I GIVE UP ON MAKING MY OWN NEOVIM CONFIG. FUCK Y'ALL STINKY BOOMERS
+alias vim="nvim "
 alias pacup="sudo pacman -Syu --noconfirm"
-alias pacs="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
-alias yays="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
+alias pacs="pacman -Slq | sk --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias starwarz="telnet towel.blinkenlights.nl"
-alias pacdesc="pacman -Ss | paste -d '' - - | fzf --multi --preview 'pacman -Si {1}' | cut -d ' ' -f 1 | xargs -ro pacman -Si"
+alias pacdesc="pacman -Ss | paste -d '' - - | sk --multi --preview 'pacman -Si {1}' | cut -d ' ' -f 1 | xargs -ro pacman -Si"
 alias wanip="dig @resolver4.opendns.com myip.opendns.com +short"
 alias cp="/usr/bin/advcp -g "
 alias mv="/usr/bin/advmv -g "
+
+# rust-powered aliases
+alias l='exa'
+
+# No more yay usage... golang == trash; rust == gtg
+# alias yays="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S" # As a new member of the rustacean cult, I've sent yay to the afterlife. #parurocks
 
 ###########################################################
 # ======================================================= #
@@ -220,6 +224,10 @@ function mkt(){
 
 function mkcpp(){
 	mkdir {src,lib,include,tests,doc}
+}
+
+function rf(){
+    rm -rfv $1 | pv
 }
 
 
@@ -270,6 +278,7 @@ function redel ()
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=/home/operat0r/.nimble/bin:$PATH
+export PATH="~/bin:$PATH"
 # pyenv stuff
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
