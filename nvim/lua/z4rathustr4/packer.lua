@@ -108,6 +108,8 @@ return require('packer').startup(function(use)
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
+    use {'zah/nim.vim'}
+    -- use {'alaviss/nim.nvim'}
     -- use {'OmniSharp/omnisharp-vim'}
     -- use {"Rigellute/shades-of-purple.vim"}
 end)
