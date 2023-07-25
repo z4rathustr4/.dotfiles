@@ -277,7 +277,7 @@ function redel ()
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
-export PATH=/home/operat0r/.nimble/bin:$PATH
+# export PATH=/home/operat0r/.nimble/bin:$PATH
 export PATH="~/bin:$PATH"
 # pyenv stuff
 export PYENV_ROOT="$HOME/.pyenv"
