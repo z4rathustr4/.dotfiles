@@ -277,6 +277,7 @@ function redel ()
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin/scripts:$PATH
 # export PATH=/home/operat0r/.nimble/bin:$PATH
 export PATH="~/bin:$PATH"
 # pyenv stuff
@@ -311,7 +312,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle joshskidmore/zsh-fzf-history-search
 # load the theme (no theme)
 # antigen theme ikirt/htb-ohmyzsh-theme
-antigen theme tjquillan/pastel
+antigen theme halfo/lambda-mod-zsh-theme
 # tell antigen that you're done.
 antigen apply
 
@@ -344,3 +345,4 @@ antigen apply
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH=/home/operat0r/.nimble/bin:/usr/share/pyenv/plugins/pyenv-virtualenv/shims:/home/operat0r/.pyenv/shims:/home/operat0r/.pyenv/bin:~/bin:/home/operat0r/.local/bin/scripts:/home/operat0r/.local/bin:/home/operat0r/bin:/usr/local/bin:/home/operat0r/.cargo/bin:/usr/bin:/bin:/usr/local/sbin:/home/operat0r/.dotnet/tools:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/lib:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/git:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/heroku:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/pip:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/lein:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/command-not-found:/home/operat0r/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/home/operat0r/.antigen/bundles/zsh-users/zsh-autosuggestions:/home/operat0r/.antigen/bundles/joshskidmore/zsh-fzf-history-search:/home/operat0r/.antigen/bundles/tjquillan/pastel
