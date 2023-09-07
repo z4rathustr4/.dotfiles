@@ -1,6 +1,7 @@
 # z4rathustr4's dotfiles 2023 edition
 
-## New config! I got tired and [this happened to packer.nvim](https://github.com/wbthomason/packer.nvim/blob/master/README.md) *Salutes with respect*
+## New config! I got tired and [this happened to packer.nvim](https://github.com/wbthomason/packer.nvim/blob/master/README.md)
+*Salutes with respect*
 
 #### As of today (2023-09-07) my dotfiles are based off of [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 
