@@ -9,14 +9,20 @@ return require('packer').startup(function(use)
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		-- or                            , branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
+		requires = {'nvim-lua/plenary.nvim'}
 	}
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use('savq/melange')
+    -- use('savq/melange')
 	use('ThePrimeagen/harpoon')
-	use('nvim-tree/nvim-tree.lua')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
+    use({
+        "jose-elias-alvarez/null-ls.nvim",
+        config = function()
+            require("null-ls").setup()
+        end,
+        requires = { "nvim-lua/plenary.nvim" },
+    })
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		requires = {
@@ -47,12 +53,16 @@ return require('packer').startup(function(use)
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
     use('RRethy/nvim-base16')
-    use {
-        "NvChad/nvterm",
-        config = function ()
-            require("nvterm").setup()
-        end,
-    }
+    -- nvterm -> useless outside of NvChad distribution
+    -- use {
+    --     "NvChad/nvterm",
+    --     config = function ()
+    --         require("nvterm").setup()
+    --     end,
+    -- }
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end}
     use {
         'numToStr/Comment.nvim',
         config = function()
@@ -68,6 +78,40 @@ return require('packer').startup(function(use)
         end,
     }
     use {'simrat39/rust-tools.nvim'}
+    use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
+    use {'Mofiqul/vscode.nvim'}
+    --
+    -- awesome-vim-colorschemes
+    use {'rafi/awesome-vim-colorschemes'}
+    -- lush.nvim
+    -- use {'rktjmp/lush.nvim'}
+    -- use {'audibleblink/hackthebox.vim'}
+    use {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    }
+
+    use {'nvim-tree/nvim-web-devicons'}
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+    }
+    -- use {'z4rathustr4/gruber-darker-vim'}
+    -- vim-coloresque
+    -- use {'gko/vim-coloresque'}
+    -- markdown-preview.nvim
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+    use {'zah/nim.vim'}
+    -- use {'alaviss/nim.nvim'}
+    -- use {'OmniSharp/omnisharp-vim'}
+    -- use {"Rigellute/shades-of-purple.vim"}
 end)
 
 

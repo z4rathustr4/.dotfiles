@@ -100,7 +100,7 @@ WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -206,7 +206,7 @@ alias cp="/usr/bin/advcp -g "
 alias mv="/usr/bin/advmv -g "
 
 # rust-powered aliases
-alias l='exa'
+alias l='exa -l'
 
 # No more yay usage... golang == trash; rust == gtg
 # alias yays="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S" # As a new member of the rustacean cult, I've sent yay to the afterlife. #parurocks
@@ -284,8 +284,8 @@ export PATH="~/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$PYENV_ROOT/shims:${PATH}"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 ###########################################################
 # ======================================================= #
@@ -345,4 +345,5 @@ antigen apply
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH=/home/operat0r/.nimble/bin:/usr/share/pyenv/plugins/pyenv-virtualenv/shims:/home/operat0r/.pyenv/shims:/home/operat0r/.pyenv/bin:~/bin:/home/operat0r/.local/bin/scripts:/home/operat0r/.local/bin:/home/operat0r/bin:/usr/local/bin:/home/operat0r/.cargo/bin:/usr/bin:/bin:/usr/local/sbin:/home/operat0r/.dotnet/tools:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/lib:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/git:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/heroku:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/pip:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/lein:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/command-not-found:/home/operat0r/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/home/operat0r/.antigen/bundles/zsh-users/zsh-autosuggestions:/home/operat0r/.antigen/bundles/joshskidmore/zsh-fzf-history-search:/home/operat0r/.antigen/bundles/tjquillan/pastel
+# export PATH=/home/operat0r/.nimble/bin:/usr/share/pyenv/plugins/pyenv-virtualenv/shims:/home/operat0r/.pyenv/shims:/home/operat0r/.pyenv/bin:~/bin:/home/operat0r/.local/bin/scripts:/home/operat0r/.local/bin:/home/operat0r/bin:/usr/local/bin:/home/operat0r/.cargo/bin:/usr/bin:/bin:/usr/local/sbin:/home/operat0r/.dotnet/tools:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/lib:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/git:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/heroku:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/pip:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/lein:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/command-not-found:/home/operat0r/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/home/operat0r/.antigen/bundles/zsh-users/zsh-autosuggestions:/home/operat0r/.antigen/bundles/joshskidmore/zsh-fzf-history-search:/home/operat0r/.antigen/bundles/tjquillan/pastel
+

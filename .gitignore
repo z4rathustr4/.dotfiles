@@ -1,2 +1,4 @@
 .config/
 .local/
+nvim_bak/plugin/*
+nvim_bak/nvim/plugin/*
