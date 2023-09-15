@@ -204,6 +204,7 @@ alias pacdesc="pacman -Ss | paste -d '' - - | sk --multi --preview 'pacman -Si {
 alias wanip="dig @resolver4.opendns.com myip.opendns.com +short"
 alias cp="/usr/bin/advcp -g "
 alias mv="/usr/bin/advmv -g "
+alias chz="chezmoi cd"
 
 # rust-powered aliases
 alias l='exa -l'
@@ -284,6 +285,7 @@ export PATH="~/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$PYENV_ROOT/shims:${PATH}"
+export PATH="$HOME/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
 # eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
 
@@ -337,6 +339,16 @@ antigen apply
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+export ANDROID_NDK_HOME=/opt/android-ndk
+export ANDROID_SDK_ROOT=/opt/android-sdk
+export CHROME_EXECUTABLE=/usr/bin/chromium
+export FVM_HOME="$HOME/fvm"
+export PATH="/opt/flutter/bin:$PATH"
+
+
+# Execute ssh-agent on shell initialization
+
+eval "$(ssh-agent -s >/dev/null 2>&1)" 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -347,3 +359,5 @@ antigen apply
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # export PATH=/home/operat0r/.nimble/bin:/usr/share/pyenv/plugins/pyenv-virtualenv/shims:/home/operat0r/.pyenv/shims:/home/operat0r/.pyenv/bin:~/bin:/home/operat0r/.local/bin/scripts:/home/operat0r/.local/bin:/home/operat0r/bin:/usr/local/bin:/home/operat0r/.cargo/bin:/usr/bin:/bin:/usr/local/sbin:/home/operat0r/.dotnet/tools:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/lib:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/git:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/heroku:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/pip:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/lein:/home/operat0r/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/command-not-found:/home/operat0r/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/home/operat0r/.antigen/bundles/zsh-users/zsh-autosuggestions:/home/operat0r/.antigen/bundles/joshskidmore/zsh-fzf-history-search:/home/operat0r/.antigen/bundles/tjquillan/pastel
 
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

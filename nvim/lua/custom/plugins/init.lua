@@ -7,5 +7,7 @@ return {
   require('custom.plugins.filetree'),
   require('custom.plugins.barbar'),
   require('custom.plugins.toggleterm'),
-
+  require('custom.plugins.flutter-tools'),
+  require('custom.plugins.nvim-dap'),
+  require('custom.plugins.nvim-dap-ui'),
 }
