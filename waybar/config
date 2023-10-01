@@ -85,7 +85,7 @@
         //"format-icons": ["", "", "", "", "", "", "", "", "", ""]
     },
      "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "interface": "wlo1", // (Optional) To force the use of this interface
         "format": "⚠ Disabled",
         "format-wifi": " [OK]",
         "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
@@ -136,9 +136,9 @@
     	"on-click": "exec nwg-drawer -c 7 -is 70 -spacing 23",
     	"tooltip": false,
 },
-     "custom/network_traffic": {
-             "exec": "~/.config/waybar/scripts/network_traffic.sh",
-             "return-type": "json",
-             "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes:>4} ⇡{bandwidthUpBytes:>4}",    // optional
-},
+    "custom/network_traffic": {
+        "exec": "~/.config/waybar/scripts/network_traffic.sh wlo1",
+        "return-type": "json",
+        "format-wifi": "{icon} {ifname}",
+    },
 }
