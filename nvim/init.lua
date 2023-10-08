@@ -131,14 +131,19 @@ require('lazy').setup({
     },
   },
 
-  {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'yellow-moon'
-    end,
-  },
+{
+  'rose-pine/neovim', name = 'rose-pine',
+  priority = 1000,
+},
+
+
+
+  -- onedark is shiet brah...
+  -- { 
+  --   -- Theme inspired by Atom
+  --   'navarasu/onedark.nvim',
+  --   priority = 1000,
+  -- },
 
   {
     -- Set lualine as statusline
@@ -159,10 +164,7 @@ require('lazy').setup({
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-    },
+    main = 'ibl'
   },
 
   -- "gc" to comment visual regions/lines
@@ -211,7 +213,7 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   { import = 'custom.plugins' },
-}, {})
+},{})
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
@@ -504,6 +506,7 @@ local on_attach = function(_, bufnr)
 
     vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
   end
+  local opts = {buffer = bufnr, remap = false}
 
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
@@ -516,6 +519,7 @@ local on_attach = function(_, bufnr)
   nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
   -- See `:help K` for why this keymap
+  -- vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
   nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
