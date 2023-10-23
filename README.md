@@ -1,4 +1,4 @@
-# z4rathustr4's dotfiles 2023 edition
+# z4rathustr4's dotfiles 2023.0x04 edition
 
 ## New config! I got tired and [this happened to packer.nvim](https://github.com/wbthomason/packer.nvim/blob/master/README.md)
 *Salutes with respect*
@@ -30,9 +30,12 @@
 ```
 
 - So, my work is located mainly in the **root's** *init.lua* and the **custom/plugins**
-tree. So far I've ported the basic stuff since [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
-has already most of the functionality of my old dotfiles, check the diffs between the main kickstart's repo *init.lua*
-and you'll see that the only additions are a few lines of keybindings, cmp and LSP stuff
+tree.
+
+- All previous functionality of my dotfiles has been adapted to the new [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
+template and the new [lazy.nvim](https://github.com/folke/lazy.nvim) package manager.
+
+- Furthermore, I've appended my kitty terminal emulator config files and theme (which I adapted from [this theme](https://github.com/dexpota/kitty-themes#tomorrow-night-eighties))
 
 - If you wanna stick with packer and [what's following it](https://github.com/lewis6991/pckr.nvim)
 **lemme remark it is not stable and a WIP as of today (2023-09-07)** 

@@ -481,11 +481,6 @@ antigen bundle pip
 antigen bundle lein
 antigen bundle command-not-found
 
-# In the name of God I proclame this plugin the Bash-ls-Alias-Killer,
-# destroyer of hidden Aliases, slayer of non-colored ls & ll outputs,
-# First of His/Her Name, and breaker of (my) mental illnesses.
-#
-# All hail: DarrinTisdale!
 antigen bundle DarrinTisdale/zsh-aliases-exa
 
 # syntax highlighting bundle.
@@ -564,6 +559,14 @@ fi
 # bun
 export BUN_INSTALL="$HOME/.local/share/reflex/bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-    eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/lambda.omp.json)"
+    eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/catppuccin_mocha.omp.json)"
 fi
+
+if [ -f ~/.config/oh-my-posh/oh-my-posh.zsh ]; then
+    source ~/.config/oh-my-posh/oh-my-posh.zsh
+else
+    print "[🤷]: ~/.zsh/zshalias not found."
+fi
+
