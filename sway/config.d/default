@@ -8,7 +8,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulators
-set $term-float alacritty
+set $term-float kitty
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -19,7 +19,9 @@ set $launcher nwg-drawer -c 7 -is 70 -spacing 23
 
 set $powermenu nwgbar
 
-set $cheat $term-float -t cheatsheet -e micro ~/.config/sway/cheatsheet.md
+set $emojimenu wofi-emoji
+
+set $cheat $term-float -t cheatsheet -e nvim ~/.config/sway/cheatsheet.md
 
 ### Idle configuration
 exec swayidle -w\
@@ -52,6 +54,9 @@ exec swayidle -w\
 
     # Launcher
     bindsym $mod+Shift+d exec $launcher
+
+    # Emoji menu (wofi-emoji)
+    bindsym $mod+Shift+z exec $emojimenu
 
     # Activities
     bindsym $mod+p exec swayr switch-window
@@ -126,6 +131,19 @@ exec swayidle -w\
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
+# Move the currently focused window to the scratchpad.
+
+    bindsym $mod+Shift+Delete move scratchpad
+
+# Show the next next scratchpad window or hide the focused scratchpad window.
+
+# If there are multiple scratchpad windows, this command cycles through them.
+
+    bindsym $mod+Delete scratchpad show 
+
+
+
 
 #
 # Layout stuff:
@@ -219,7 +237,7 @@ bindsym XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo
 # App shortcuts
 #
     bindsym $mod+n exec thunar
-    bindsym $mod+o exec firedragon
+    bindsym $mod+o exec firefox
 #
 # Screenshots
 #
