@@ -11,5 +11,6 @@ return {
   require('custom.plugins.nvim-dap'),
   require('custom.plugins.nvim-dap-ui'),
   require('custom.plugins.hover'),
-  require('custom.plugins.rose-pine')
+  require('custom.plugins.rose-pine'),
+  require('custom.plugins.codeium'),
 }
