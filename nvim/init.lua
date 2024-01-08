@@ -131,11 +131,17 @@ require('lazy').setup({
     },
   },
 
-{
-  'rose-pine/neovim', name = 'rose-pine',
-  priority = 1000,
-},
-
+-- {
+--   'rose-pine/neovim', name = 'rose-pine',
+--   priority = 1000,
+-- },
+  { 
+    'projekt0n/github-nvim-theme', name = 'github-theme',
+    priority = 1000,
+    config = function()
+      require('github-theme').setup()
+    end
+  },
 
 
   -- onedark is shiet brah...
@@ -152,7 +158,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'auto',
+        theme = 'github_dark',
         component_separators = '|',
         section_separators = '',
       },
