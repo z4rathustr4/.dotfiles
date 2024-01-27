@@ -45,6 +45,11 @@ template and the new [lazy.nvim](https://github.com/folke/lazy.nvim) package man
 which I used to avoid breaking changes whenever I tried something new.
 
 
+## theme-and-appearance.zsh
+- This one was tricky to get, if you use `robbierussell` bundle, Alt-L will not work as intended, resulting in returning a normal `ls --color=auto`. 
+I found my way into modifying the `robbierussell` bundle to fix this. You need to replace your `theme-and-appearance.zsh` in `$HOME/.antigen/bundles/robbyrussell/oh-my-zsh/lib/theme-and-appearance.zsh`
+with the one provided in this repo. This is a ducktape fix, but it works. ¯\_(ツ)_/¯
+
 ### As always, keep in mind:
 
 - These are my personal dotfiles and I won't take any pull request seriously
