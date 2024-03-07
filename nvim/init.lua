@@ -17,8 +17,7 @@ Kickstart.nvim is a template for your own configuration.
   a guide. One possible example:
   - https://learnxinyminutes.com/docs/lua/
 
-
-  And then you can explore or search through `:help lua-guide`
+And then you can explore or search through `:help lua-guide`
   - https://neovim.io/doc/user/lua-guide.html
 
 
@@ -131,18 +130,9 @@ require('lazy').setup({
     },
   },
 
--- {
---   'rose-pine/neovim', name = 'rose-pine',
---   priority = 1000,
--- },
-  { 
-    'projekt0n/github-nvim-theme', name = 'github-theme',
-    priority = 1000,
-    config = function()
-      require('github-theme').setup()
-    end
+  {
+    "catppuccin/nvim", name = "catppuccin", priority = 1000,
   },
-
 
   -- onedark is shiet brah...
   -- { 
@@ -150,7 +140,6 @@ require('lazy').setup({
   --   'navarasu/onedark.nvim',
   --   priority = 1000,
   -- },
-
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -158,7 +147,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'github_dark',
+        theme = 'catppuccin',
         component_separators = '|',
         section_separators = '',
       },
@@ -219,7 +208,9 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   { import = 'custom.plugins' },
-},{})
+})
+
+
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
